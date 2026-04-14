@@ -65,8 +65,17 @@ A: Because [universal hashing] with modular arithmetic gives independence guaran
 
 ## 12.12 Algorithmic Takeaway
 
-Q: What's the pattern by which number theory enables so many algorithms?
-A: "Mod a prime" supplies (i) a finite group/field with all arithmetic operations defined, (ii) cheap bijective maps (multiplication by a unit), (iii) distribution properties (Fermat, primitive roots), (iv) security assumptions (DL, QR, factoring). Pick your prime, pick your operation, and you instantly get a structured-but-random object — the algorithmic equivalent of a Swiss army knife.
+Q: Why does "work mod a prime" give you a finite field with all arithmetic operations?
+A: Because $\mathbb{F}_p = \mathbb{Z}/p\mathbb{Z}$ is a field exactly when $p$ is prime (every nonzero element coprime to $p$, hence invertible). Addition, subtraction, multiplication, and division are ALL defined — something composite moduli don't offer. This is why primes are the algorithmic "atoms" of modular structure.
 
-Q: Where should you go next after this deck?
-A: Three natural directions. (i) [Abstract algebra]: group theory, rings, fields, Galois theory — the structural framework behind everything here. (ii) [Algebraic number theory]: number fields, ideals, reciprocity in general settings. (iii) [Cryptographic protocol design]: zero-knowledge proofs, homomorphic encryption, multi-party computation, post-quantum schemes. Each builds on the number-theoretic foundation you now have.
+Q: Why does multiplication by a unit mod $p$ give a bijection — and why is that useful?
+A: Because if $\gcd(a, p) = 1$, the map $x \mapsto ax \bmod p$ has inverse $x \mapsto a^{-1} x$, so it's a bijection on residues. This "cheap permutation" underlies universal hashing, LCG period analysis, and RSA encryption — all of which need input-independent, reversible scrambling.
+
+Q: Why do discrete-log-style hardness assumptions give algorithms security guarantees for free?
+A: Because reducing a protocol's security to a well-studied problem (DL, QR, factoring) means the protocol is no easier to break than the problem. Decades of failed attacks on DL/factoring give us empirical confidence. A fresh primitive without such a reduction must prove its own security — much harder.
+
+Q: What is [abstract algebra] and why does it naturally follow number theory?
+A: The study of groups, rings, fields, and modules in their own right, abstracted away from the integers. Number theory's theorems (Fermat, Lagrange, CRT) all appear as special cases of group/ring theorems — learning algebra reveals the deep structure behind the examples.
+
+Q: What is [algebraic number theory]?
+A: The study of finite extensions of $\mathbb{Q}$ (number fields like $\mathbb{Q}(\sqrt{-5})$) and their rings of integers. Extends divisibility, primes, and reciprocity to settings where unique factorization may fail — requiring ideals, class groups, and class field theory to restore order.

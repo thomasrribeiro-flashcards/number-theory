@@ -82,5 +82,11 @@ A: Forgetting that the modulus in CRT's answer is the PRODUCT $M$, not the sum, 
 
 ## 6.12 Summary of Uses
 
-Q: Name five algorithmic uses of the Chinese Remainder Theorem.
-A: (i) RSA decryption speedup. (ii) Large-integer arithmetic via residue number systems. (iii) Parallel modular computation. (iv) Threshold secret sharing (Mignotte, Asmuth–Bloom). (v) Fast Fourier Transform over $\mathbb{Z}/N\mathbb{Z}$ via CRT decomposition into prime-modulus FFTs. A single theorem, many layers of algorithmic leverage.
+Q: How does CRT accelerate RSA decryption specifically?
+A: It replaces one exponentiation mod $n = pq$ with two exponentiations mod $p$ and mod $q$ — each half the bit-length, giving a $\sim 4\times$ speedup after recombining via CRT (see §6.7).
+
+Q: How does CRT underpin FFT-based big-integer multiplication?
+A: By choosing several small primes $p_i$ whose product exceeds the answer, large integers are represented as tuples of residues; arithmetic is done component-wise in small FFTs over $\mathbb{F}_{p_i}$, then recombined via CRT. Avoids floating-point roundoff entirely.
+
+Q: Why does CRT make threshold secret sharing possible?
+A: Because a secret $S$ can be reconstructed from enough residues $S \bmod m_i$ (via CRT) but is information-theoretically hidden by too few — Mignotte's scheme tunes moduli so the product of any $t$ exceeds $S$ and fewer leaves $S$ ambiguous.

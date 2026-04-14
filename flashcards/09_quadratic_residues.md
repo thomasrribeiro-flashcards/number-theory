@@ -104,5 +104,11 @@ A: $2^k$ solutions. Each prime factor contributes $2$ solutions ($\pm$), and CRT
 
 ## 9.12 Why QRs Appear Everywhere
 
-Q: Name three cryptographic/algorithmic uses of quadratic residues.
-A: (i) [Goldwasser–Micali] public-key encryption via QRP. (ii) [Blum–Blum–Shub] pseudorandom generator based on iterated squaring. (iii) [Rabin signatures] relying on $4$-to-$1$ squaring map. QR theory provides a "hardness assumption" parallel to but distinct from the discrete-log and factoring assumptions — one more arrow in the cryptographer's quiver.
+Q: How does [Goldwasser–Micali encryption] use quadratic residues?
+A: The public key is $(n, y)$ where $n = pq$ and $y$ is a QNR with Jacobi symbol $+1$. To encrypt a bit $b$: pick random $x$; send $c = x^2 \bmod n$ if $b = 0$, or $c = y \cdot x^2 \bmod n$ if $b = 1$. Security: distinguishing QR from QNR with Jacobi $+1$ is the QRP, presumed hard.
+
+Q: How does the [Blum–Blum–Shub] generator use QRs?
+A: Pick $n = pq$ with $p \equiv q \equiv 3 \pmod 4$. Start with seed $x_0$; iterate $x_{i+1} = x_i^2 \bmod n$; output one bit (LSB) per step. Predicting the next bit is as hard as the QR assumption — cryptographically secure PRNG.
+
+Q: Why does [Rabin signatures] rely on the $4$-to-$1$ squaring map?
+A: Because for $n = pq$, the map $x \mapsto x^2 \bmod n$ is $4$-to-$1$, and inverting it (finding square roots) is equivalent to factoring $n$. Verifying a signature $s$ for message $m$ reduces to checking $s^2 \equiv m \pmod n$ — fast; forging requires square roots, hence factoring.
