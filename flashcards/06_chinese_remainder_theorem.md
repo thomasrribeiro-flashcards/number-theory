@@ -90,3 +90,17 @@ A: By choosing several small primes $p_i$ whose product exceeds the answer, larg
 
 Q: Why does CRT make threshold secret sharing possible?
 A: Because a secret $S$ can be reconstructed from enough residues $S \bmod m_i$ (via CRT) but is information-theoretically hidden by too few — Mignotte's scheme tunes moduli so the product of any $t$ exceeds $S$ and fewer leaves $S$ ambiguous.
+
+## 6.13 Pattern Recognition
+
+Q: You see a system of $\geq 2$ congruences with coprime moduli asking for $x$. What technique?
+A: CRT directly — use the bulk formula $x \equiv \sum a_i M_i y_i \pmod M$ or iterative pairwise method.
+
+Q: You see a system of congruences but the moduli share factors. What technique?
+A: Reduce each congruence to prime-power moduli, check consistency on shared factors via $\gcd$ condition, then CRT on the surviving system.
+
+Q: You see "$c^d \bmod n$" with $n = pq$ and large $d$. What technique?
+A: CRT split: compute $c^{d \bmod (p-1)} \bmod p$ and $c^{d \bmod (q-1)} \bmod q$, then CRT-recombine. Standard RSA decryption optimization.
+
+Q: You see "find a polynomial $P$ with $P(x_i) = y_i$ for given points". What's the structural connection to CRT?
+A: It's polynomial-ring CRT in $\mathbb{F}[x]$ with moduli $(x - x_i)$. Lagrange interpolation IS the CRT construction.
