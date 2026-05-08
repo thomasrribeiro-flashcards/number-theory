@@ -56,7 +56,7 @@ A: $ax \equiv b \pmod n$ iff $ax - b = ny$ for some $y \in \mathbb{Z}$, iff $ax 
 
 ## 5.7 Linear Congruence Solvability (Review)
 
-C: The linear congruence $ax \equiv b \pmod n$ has a solution iff $\gcd(a, n) \mid b$; when solvable, it has exactly $\gcd(a, n)$ solutions mod $n$.
+C: The linear congruence $ax \equiv b \pmod n$ has a solution iff [$\gcd(a, n) \mid b$]; when solvable, it has exactly $\gcd(a, n)$ solutions mod $n$.
 
 Q: Why does the number of solutions mod $n$ equal $\gcd(a, n)$?
 A: Let $d = \gcd(a, n)$. Divide through: $(a/d) x \equiv (b/d) \pmod{n/d}$ with $\gcd(a/d, n/d) = 1$, so unique $x \equiv x_0 \pmod{n/d}$. Lifting back to mod $n$: the solutions are $x_0, x_0 + n/d, x_0 + 2 \cdot n/d, \dots, x_0 + (d-1) \cdot n/d$ — exactly $d$ of them.

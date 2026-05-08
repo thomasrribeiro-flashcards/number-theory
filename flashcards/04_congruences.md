@@ -8,7 +8,7 @@ tags = ["math", "number-theory", "congruences", "modular-arithmetic", "residues"
 
 ## 4.1 Defining Congruence
 
-C: For $n \geq 1$ and integers $a, b$: $a \equiv b \pmod n$ (read "a is congruent to b modulo n") iff $n \mid (a - b)$.
+C: For $n \geq 1$ and integers $a, b$: $a \equiv b \pmod n$ (read "a is congruent to b modulo n") iff [$n \mid (a - b)$].
 
 Q: Why is congruence mod $n$ an equivalence relation on $\mathbb{Z}$?
 A: (i) Reflexive: $n \mid 0 = a - a$, so $a \equiv a$. (ii) Symmetric: $n \mid (a - b) \Rightarrow n \mid (b - a)$. (iii) Transitive: if $n \mid (a - b)$ and $n \mid (b - c)$, then $n \mid ((a - b) + (b - c)) = (a - c)$. The three axioms hold, so $\equiv \pmod n$ partitions $\mathbb{Z}$ into $n$ equivalence classes.
