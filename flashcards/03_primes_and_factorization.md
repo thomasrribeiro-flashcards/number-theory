@@ -1,6 +1,6 @@
 +++
 order = 3
-subject = "Math"
+subject = "Mathematics"
 tags = ["math", "number-theory", "primes", "unique-factorization", "prime-counting", "euclid"]
 +++
 
@@ -62,8 +62,8 @@ S:
 Q: How did Euclid prove that there are infinitely many primes?
 A: Suppose for contradiction there are only finitely many primes $p_1, \dots, p_n$. Consider $N = p_1 p_2 \cdots p_n + 1$. $N$ has some prime factor $p$ (by existence of factorization). But $p \neq p_i$ for any $i$ (since $N \equiv 1 \pmod{p_i}$), so $p$ is a prime not in our list — contradicting finiteness.
 
-Q: Is $N = p_1 p_2 \cdots p_n + 1$ always prime?
-A: NO — the construction yields an integer with a prime factor outside the list, but $N$ itself need not be prime. Example: $2 \cdot 3 \cdot 5 \cdot 7 \cdot 11 \cdot 13 + 1 = 30031 = 59 \cdot 509$, composite but with new primes $59, 509$ not among $\{2,3,5,7,11,13\}$. A common misunderstanding of Euclid's proof.
+Q: Why is $N = p_1 p_2 \cdots p_n + 1$ from Euclid's proof not necessarily prime itself?
+A: The construction only guarantees an integer whose prime factors lie outside the list — $N$ itself need not be prime. Example: $2 \cdot 3 \cdot 5 \cdot 7 \cdot 11 \cdot 13 + 1 = 30031 = 59 \cdot 509$, composite but with new primes $59, 509$ not among $\{2,3,5,7,11,13\}$. A common misunderstanding of Euclid's proof.
 
 ## 3.7 The Sieve of Eratosthenes
 
@@ -90,8 +90,14 @@ A: Because if $p = ab$ is composite, then $2^a - 1 \mid 2^{ab} - 1 = M_p$, so $M
 
 C: A [Fermat prime] is a prime of the form $F_n = 2^{2^n} + 1$.
 
-Q: What is known about Fermat primes?
-A: The first five ($F_0, \dots, F_4 = 3, 5, 17, 257, 65537$) are prime. $F_5 = 4{,}294{,}967{,}297 = 641 \cdot 6{,}700{,}417$ is composite (Euler, 1732). No other Fermat primes are known — and it is conjectured there are none. Gauss showed that a regular $n$-gon is constructible by compass and straightedge iff $n$ is a power of $2$ times distinct Fermat primes.
+Q: Which Fermat numbers $F_n = 2^{2^n} + 1$ are known to be prime?
+A: Only the first five: $F_0, \dots, F_4 = 3, 5, 17, 257, 65537$. No other Fermat primes are known — and it is conjectured there are none.
+
+Q: What did Euler show about the Fermat number $F_5$?
+A: $F_5 = 4{,}294{,}967{,}297 = 641 \cdot 6{,}700{,}417$ is composite (Euler, 1732) — the first Fermat number shown not to be prime.
+
+Q: How do Fermat primes relate to compass-and-straightedge constructions?
+A: Gauss showed that a regular $n$-gon is constructible by compass and straightedge iff $n$ is a power of $2$ times distinct Fermat primes.
 
 ## 3.10 Twin Primes and Open Problems
 

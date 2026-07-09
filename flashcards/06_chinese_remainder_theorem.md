@@ -1,6 +1,6 @@
 +++
 order = 6
-subject = "Math"
+subject = "Mathematics"
 tags = ["math", "number-theory", "crt", "chinese-remainder", "systems", "modular"]
 +++
 
@@ -49,8 +49,8 @@ A: Iteratively: solve the first two congruences for $x \pmod{m_1 m_2}$, then com
 
 ## 6.6 Non-Coprime Moduli
 
-Q: What if the moduli aren't pairwise coprime — can CRT be salvaged?
-A: Yes, with a [consistency condition]. $x \equiv a \pmod m$ and $x \equiv b \pmod n$ has a solution iff $a \equiv b \pmod{\gcd(m, n)}$. If consistent, the combined modulus is $\text{lcm}(m, n)$; if not, no solution. CRT extends by solving pairs with this check and promoting the compatible modulus.
+Q: When the moduli aren't pairwise coprime, what condition decides whether $x \equiv a \pmod m$ and $x \equiv b \pmod n$ are solvable — and what is the combined modulus?
+A: The [consistency condition]: a solution exists iff $a \equiv b \pmod{\gcd(m, n)}$. If consistent, the combined modulus is $\text{lcm}(m, n)$; if not, no solution. CRT extends by solving pairs with this check and promoting the compatible modulus.
 
 ## 6.7 CRT and Modular Exponentiation
 
@@ -77,8 +77,11 @@ A: Given distinct $x_1, \dots, x_k$ and values $y_1, \dots, y_k$, seek a polynom
 
 ## 6.11 Pitfalls
 
-Q: What's a common CRT mistake?
-A: Forgetting that the modulus in CRT's answer is the PRODUCT $M$, not the sum, and that "unique" means unique modulo $M$ — infinitely many integer solutions exist. Also: mistakenly applying CRT to non-coprime moduli, which requires extra care (see §6.6).
+Q: The CRT solution is "unique" — unique modulo what, and how many integer solutions are there?
+A: Unique modulo the PRODUCT $M = m_1 m_2 \cdots m_k$, not the sum. As integers there are infinitely many solutions, all congruent mod $M$.
+
+Q: What hypothesis must you check before applying the standard CRT formula to a system of congruences?
+A: That the moduli are pairwise coprime — non-coprime moduli require the consistency check $a \equiv b \pmod{\gcd(m, n)}$ instead (see §6.6).
 
 ## 6.12 Summary of Uses
 

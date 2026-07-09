@@ -1,6 +1,6 @@
 +++
 order = 7
-subject = "Math"
+subject = "Mathematics"
 tags = ["math", "number-theory", "fermat", "euler", "wilson", "totient", "multiplicative"]
 +++
 
@@ -91,7 +91,7 @@ S:
 2. $1000 = 25 \cdot 40$, so $1000 \equiv 0 \pmod{40}$.
 3. $3^{1000} \equiv 3^0 = 1 \pmod{100}$.
 
-**EVALUATE**: When $1000$ is a multiple of $\varphi(100) = 40$, the result is $1$. Without Euler's theorem, this would need $1000$-deep repeated squaring.
+**EVALUATE**: Cross-check via CRT: mod $4$, $3 \equiv -1$ so $3^{1000} \equiv 1$; mod $25$, $\varphi(25) = 20 \mid 1000$ so $3^{1000} \equiv 1$; both agree with $1 \pmod{100}$ ✓. Naively this would need $\sim 1000$ modular multiplications (or $\sim 10$ via repeated squaring).
 
 ## 7.7 Wilson's Theorem
 

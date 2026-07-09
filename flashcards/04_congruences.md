@@ -1,6 +1,6 @@
 +++
 order = 4
-subject = "Math"
+subject = "Mathematics"
 tags = ["math", "number-theory", "congruences", "modular-arithmetic", "residues"]
 +++
 

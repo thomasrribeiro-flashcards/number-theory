@@ -1,6 +1,6 @@
 +++
 order = 9
-subject = "Math"
+subject = "Mathematics"
 tags = ["math", "number-theory", "quadratic-residues", "legendre", "jacobi", "reciprocity"]
 +++
 
@@ -8,7 +8,8 @@ tags = ["math", "number-theory", "quadratic-residues", "legendre", "jacobi", "re
 
 ## 9.1 Quadratic Residues
 
-C: For an odd prime $p$ and $a$ coprime to $p$, $a$ is a [quadratic residue] mod $p$ (QR) if $x^2 \equiv a \pmod p$ has a solution; otherwise, $a$ is a [quadratic non-residue] (QNR).
+Q: For an odd prime $p$ and $a$ coprime to $p$, when is $a$ a [quadratic residue] (QR) mod $p$?
+A: When $x^2 \equiv a \pmod p$ has a solution; otherwise, $a$ is a [quadratic non-residue] (QNR).
 
 Q: Why do we exclude the case $\gcd(a, p) \neq 1$?
 A: Because $0$ has a trivial square root ($0 = 0^2$), but it's neither a unit nor useful in the multiplicative theory. For $p \mid a$, the question "is $a$ a QR" is trivially yes via $x = 0$. Restricting to $\gcd(a, p) = 1$ keeps the theory inside the unit group $(\mathbb{Z}/p\mathbb{Z})^{\times}$.
@@ -32,7 +33,7 @@ C: [Euler's criterion]: $\left(\frac{a}{p}\right) \equiv a^{(p-1)/2} \pmod p$.
 Q: Why does Euler's criterion hold?
 A: By Fermat, $a^{p-1} \equiv 1 \pmod p$, so $(a^{(p-1)/2})^2 \equiv 1$, meaning $a^{(p-1)/2} \equiv \pm 1 \pmod p$. If $a = x^2$ is a QR, $a^{(p-1)/2} = x^{p-1} \equiv 1$. Otherwise $a^{(p-1)/2} \equiv -1$ (by exclusion, since there are $(p-1)/2$ each of $+1$ and $-1$ values among $(p-1)$ elements).
 
-P: Is $3$ a quadratic residue modulo $11$?
+P: Determine whether $3$ is a quadratic residue modulo $11$.
 S:
 **IDENTIFY**: Apply Euler's criterion.
 

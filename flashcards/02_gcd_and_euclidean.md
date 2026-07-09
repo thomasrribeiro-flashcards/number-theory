@@ -1,6 +1,6 @@
 +++
 order = 2
-subject = "Math"
+subject = "Mathematics"
 tags = ["math", "number-theory", "gcd", "euclidean-algorithm", "bezout", "lcm"]
 +++
 
@@ -8,7 +8,7 @@ tags = ["math", "number-theory", "gcd", "euclidean-algorithm", "bezout", "lcm"]
 
 ## 2.1 Defining the GCD
 
-C: The [greatest common divisor] $\gcd(a, b)$ of integers $a, b$ (not both zero) is the unique positive integer $d$ such that (i) $d \mid a$ and $d \mid b$, and (ii) any common divisor of $a$ and $b$ divides $d$.
+C: The greatest common divisor $\gcd(a, b)$ of integers $a, b$ (not both zero) is the unique positive integer $d$ such that (i) $d \mid a$ and $d \mid b$, and (ii) [any common divisor of $a$ and $b$ divides $d$].
 
 Q: Why is the "universal" characterization (every common divisor divides $d$) equivalent to "the largest"?
 A: For positive $d$, "every common divisor divides $d$" forces any common divisor $\leq d$ (divisors of $d$ are $\leq d$); conversely, the largest common divisor is divided by every other common divisor (since it absorbs their contributions). The universal form is more useful in proofs: it extends naturally to abstract settings (polynomial rings, ideals).
@@ -18,7 +18,7 @@ A: $\gcd(0, b) = b$. Every positive integer divides $0$ (since $0 = b \cdot 0$),
 
 ## 2.2 Coprime Integers
 
-C: Integers $a, b$ are [coprime] (or relatively prime) iff $\gcd(a, b) = 1$.
+C: Integers $a, b$ are coprime (or relatively prime) iff [$\gcd(a, b) = 1$].
 
 Q: Why is coprimality so important in number theory and cryptography?
 A: Because coprimality is the condition under which modular inverses exist, under which the Chinese Remainder Theorem applies cleanly, and under which Fermat/Euler's theorems hold. Coprimality is the integer analogue of "linearly independent" — the structural condition enabling decomposition into simpler components.
@@ -109,7 +109,7 @@ A: Every ideal of $\mathbb{Z}$ is principal — of the form $n\mathbb{Z}$ for so
 
 ## 2.8 Least Common Multiple
 
-C: The [least common multiple] $\text{lcm}(a, b)$ of nonzero integers is the smallest positive integer divisible by both $a$ and $b$.
+C: The least common multiple $\text{lcm}(a, b)$ of nonzero integers is the [smallest positive integer divisible by both] $a$ and $b$.
 
 Q: What is the relationship between gcd and lcm?
 A: $\gcd(a, b) \cdot \text{lcm}(a, b) = |ab|$. Proof idea: in prime factorizations, gcd takes minimums of exponents, lcm takes maximums; min + max = sum of the exponents, which is the exponent in $ab$. Computationally: $\text{lcm}(a, b) = |ab|/\gcd(a, b)$, so no separate lcm algorithm is needed.

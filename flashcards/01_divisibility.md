@@ -1,6 +1,6 @@
 +++
 order = 1
-subject = "Math"
+subject = "Mathematics"
 tags = ["math", "number-theory", "divisibility", "division-algorithm", "integers"]
 +++
 
@@ -16,7 +16,7 @@ A: A discrete-math chapter typically covers gcd, mod, Fermat, and CRT to enable 
 
 ## 1.2 Divisibility
 
-C: For integers $a, b$ with $a \neq 0$, we say $a$ [divides] $b$ (written $a \mid b$) iff $\exists k \in \mathbb{Z}\, (b = ak)$.
+C: For integers $a, b$ with $a \neq 0$, we say $a$ divides $b$ (written $a \mid b$) iff [$\exists k \in \mathbb{Z}\, (b = ak)$].
 
 Q: Why exclude $a = 0$ from the definition of $a \mid b$?
 A: Because "$0 \mid b$" would mean "$b = 0 \cdot k$ for some $k$", true only if $b = 0$ but with $k$ unrestricted — making $0 \mid 0$ trivially true yet not analogous to other divisibility statements. Many texts define $0 \mid 0$ (true) and $0 \nmid b$ for $b \neq 0$, but the most useful convention excludes $a = 0$ entirely to keep quotients $b/a$ meaningful.
@@ -29,8 +29,11 @@ A: Write $b = ak_1$ and $c = ak_2$. Then $mb + nc = m \cdot ak_1 + n \cdot ak_2 
 Q: Why is divisibility transitive?
 A: If $a \mid b$ and $b \mid c$, then $b = ak_1$ and $c = bk_2 = a(k_1 k_2)$, so $a \mid c$. Transitivity follows from associativity of integer multiplication: divisibility chains compose.
 
-Q: What are the divisibility analogues of reflexivity and antisymmetry?
-A: Reflexivity: $a \mid a$ (take $k = 1$). Antisymmetry on positive integers: if $a \mid b$ and $b \mid a$ with $a, b > 0$, then $a = b$ — because $a \leq b$ and $b \leq a$ forces equality. Over all of $\mathbb{Z}$, you get $a = \pm b$ since signs are unconstrained. Divisibility on $\mathbb{Z}^+$ is thus a partial order.
+Q: What is the divisibility analogue of reflexivity?
+A: $a \mid a$ for every integer $a \neq 0$ (take $k = 1$).
+
+Q: In what sense is divisibility antisymmetric?
+A: On positive integers: if $a \mid b$ and $b \mid a$ with $a, b > 0$, then $a = b$ — because $a \leq b$ and $b \leq a$ forces equality. Over all of $\mathbb{Z}$, you get $a = \pm b$ since signs are unconstrained. Divisibility on $\mathbb{Z}^+$ is thus a partial order.
 
 ## 1.4 The Division Algorithm
 
@@ -60,7 +63,8 @@ A: Because $q$ is the largest integer with $bq \leq a$, which is $\lfloor a/b \r
 
 ## 1.6 Parity
 
-C: An integer is [even] iff $2 \mid n$; [odd] iff $2 \nmid n$.
+Q: In terms of divisibility by $2$, when is an integer $n$ even, and when is it odd?
+A: Even iff $2 \mid n$; odd iff $2 \nmid n$.
 
 Q: Why does "every integer is either even or odd, but not both" follow from the division algorithm?
 A: Divide $n$ by $2$: the division algorithm yields a UNIQUE $(q, r)$ with $r \in \{0, 1\}$. $r = 0$ means $n = 2q$ (even); $r = 1$ means $n = 2q + 1$ (odd). Uniqueness rules out being both; existence rules out being neither.
@@ -88,7 +92,7 @@ A: Because $10 \equiv -1 \pmod {11}$, so $10^k \equiv (-1)^k \pmod{11}$. Then $n
 
 ## 1.8 Greatest Common Divisor (Preview)
 
-C: The [greatest common divisor] of integers $a, b$ (not both zero) is the largest positive integer dividing both; written $\gcd(a, b)$.
+C: The greatest common divisor $\gcd(a, b)$ of integers $a, b$ (not both zero) is the [largest positive integer dividing both].
 
 Q: Why define $\gcd(a, b)$ for arbitrary integers, not just positives?
 A: Because $\gcd(a, b) = \gcd(|a|, |b|)$ — sign doesn't affect divisibility. Extending to all integers (still excluding the $(0, 0)$ case) lets us apply the gcd machinery to Bézout coefficients, which are naturally signed, without case-splitting. The Euclidean algorithm in the next chapter makes this precise.

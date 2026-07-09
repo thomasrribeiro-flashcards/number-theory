@@ -1,6 +1,6 @@
 +++
 order = 12
-subject = "Math"
+subject = "Mathematics"
 tags = ["math", "number-theory", "algorithms", "hashing", "prng", "checksum", "coding-theory"]
 +++
 
@@ -18,8 +18,11 @@ A: Because "$\text{hash}(k) \bmod p$" with $p$ prime spreads keys more uniformly
 
 ## 12.3 Universal Hashing
 
-Q: What is [universal hashing] and why does it use number theory?
-A: A family of hash functions $\mathcal{H}$ is [universal] if for any two keys $k_1 \neq k_2$, the probability over random $h \in \mathcal{H}$ that $h(k_1) = h(k_2)$ is $\leq 1/m$ (where $m$ is the table size). A classic construction: $h_{a,b}(k) = ((ak + b) \bmod p) \bmod m$ with $p$ prime $> |U|$, random $a \in \{1,\dots,p-1\}$ and $b \in \{0,\dots,p-1\}$. Modular structure gives the analysis its collision bound.
+Q: What makes a family of hash functions $\mathcal{H}$ [universal]?
+A: For any two keys $k_1 \neq k_2$, the probability over random $h \in \mathcal{H}$ that $h(k_1) = h(k_2)$ is $\leq 1/m$ (where $m$ is the table size).
+
+Q: What is the classic number-theoretic construction of a [universal hash family]?
+A: $h_{a,b}(k) = ((ak + b) \bmod p) \bmod m$ with $p$ prime $> |U|$ (the key universe), random $a \in \{1,\dots,p-1\}$ and $b \in \{0,\dots,p-1\}$. Modular structure gives the analysis its collision bound.
 
 ## 12.4 Rolling Hashes and Rabin–Karp
 
@@ -28,7 +31,8 @@ A: Compute a polynomial hash of the pattern: $H(P) = \sum_{i} P_i B^{n-1-i} \bmo
 
 ## 12.5 Linear Congruential Generators
 
-C: A [linear congruential generator] (LCG) produces pseudorandom sequences via $x_{n+1} = (a x_n + c) \bmod m$ with chosen parameters $a, c, m$.
+Q: What recurrence defines a [linear congruential generator] (LCG)?
+A: $x_{n+1} = (a x_n + c) \bmod m$, with chosen parameters $a, c, m$.
 
 Q: What does the [Hull–Dobell theorem] say about LCG period?
 A: The LCG has full period $m$ iff: (i) $\gcd(c, m) = 1$; (ii) $a - 1$ is divisible by every prime factor of $m$; (iii) $a - 1$ is divisible by $4$ if $m$ is. Number theory tells you which parameters give maximum period — essential for a useful PRNG. LCGs are fast but have known flaws (low-dimensional uniformity); modern PRNGs use richer structures (xorshift, PCG).
@@ -50,7 +54,7 @@ A: [Number-theoretic transform (NTT)] is the FFT over $\mathbb{Z}/p\mathbb{Z}$ u
 
 ## 12.9 Modular Arithmetic in Checksums
 
-Q: How do CRC checksums use algebraic number theory?
+Q: How do CRC checksums use modular polynomial arithmetic?
 A: A [cyclic redundancy check] treats data as a polynomial over $\mathbb{F}_2$ and computes its remainder modulo a fixed generator polynomial $G(x)$. Detects burst errors up to the degree of $G$. Standards (Ethernet CRC-32, ZIP CRC-32) use specific generator polynomials chosen for strong error-detection properties. Cheap (table lookup) and effective.
 
 ## 12.10 Zero-Knowledge Proofs

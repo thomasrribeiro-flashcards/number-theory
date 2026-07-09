@@ -1,6 +1,6 @@
 +++
 order = 8
-subject = "Math"
+subject = "Mathematics"
 tags = ["math", "number-theory", "order", "primitive-root", "discrete-log", "cyclic"]
 +++
 
@@ -95,5 +95,11 @@ A: Because $\text{ind}_g(ab) \equiv \text{ind}_g(a) + \text{ind}_g(b) \pmod{\var
 
 ## 8.12 The Structure Theorem
 
-Q: What is the full structure of $(\mathbb{Z}/n\mathbb{Z})^{\times}$ as an abelian group?
-A: By CRT, $(\mathbb{Z}/n\mathbb{Z})^{\times} \cong \prod_i (\mathbb{Z}/p_i^{e_i}\mathbb{Z})^{\times}$ for $n = \prod p_i^{e_i}$. Each prime power factor is: cyclic of order $p_i^{e_i - 1}(p_i - 1)$ for odd primes; $\{e\}$ for $2^1$; $\mathbb{Z}/2$ for $2^2$; $\mathbb{Z}/2 \times \mathbb{Z}/2^{k-2}$ for $2^k$ with $k \geq 3$. Combining via CRT gives a full decomposition into cyclic factors.
+Q: How does CRT decompose $(\mathbb{Z}/n\mathbb{Z})^{\times}$ for $n = \prod_i p_i^{e_i}$?
+A: $(\mathbb{Z}/n\mathbb{Z})^{\times} \cong \prod_i (\mathbb{Z}/p_i^{e_i}\mathbb{Z})^{\times}$ — the unit group's structure reduces to the prime-power cases, giving a full decomposition into cyclic factors.
+
+Q: What is the structure of $(\mathbb{Z}/p^k\mathbb{Z})^{\times}$ for an odd prime $p$?
+A: Cyclic of order $p^{k-1}(p - 1)$.
+
+Q: What is the structure of $(\mathbb{Z}/2^k\mathbb{Z})^{\times}$?
+A: $\{e\}$ for $2^1$; $\mathbb{Z}/2$ for $2^2$; $\mathbb{Z}/2 \times \mathbb{Z}/2^{k-2}$ for $2^k$ with $k \geq 3$ (hence not cyclic for $k \geq 3$).

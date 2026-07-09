@@ -1,6 +1,6 @@
 +++
 order = 11
-subject = "Math"
+subject = "Mathematics"
 tags = ["math", "number-theory", "cryptography", "rsa", "diffie-hellman", "ecc", "public-key"]
 +++
 
@@ -51,7 +51,8 @@ A: For SIGNATURES, not encryption. [Probabilistic Signature Scheme] randomizes t
 
 ## 11.6 Diffie–Hellman Key Exchange
 
-C: In [Diffie–Hellman], the public parameters are a large prime $p$ and a generator $g$ of a prime-order subgroup of $\mathbb{F}_p^{\times}$.
+Q: What are the public parameters in [Diffie–Hellman] key exchange?
+A: A large prime $p$ and a generator $g$ of a prime-order subgroup of $\mathbb{F}_p^{\times}$.
 
 Q: What are the two messages exchanged in Diffie–Hellman?
 A: Alice picks secret $a$ and sends $A = g^a \bmod p$. Bob picks secret $b$ and sends $B = g^b \bmod p$. Each uses their own secret and the received value to derive the shared key.

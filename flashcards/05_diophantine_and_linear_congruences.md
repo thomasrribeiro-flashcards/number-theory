@@ -1,6 +1,6 @@
 +++
 order = 5
-subject = "Math"
+subject = "Mathematics"
 tags = ["math", "number-theory", "diophantine", "linear-congruence", "bezout", "integer-solutions"]
 +++
 
@@ -71,7 +71,7 @@ A: (i) First solve each individually, getting $x \equiv c_i \pmod{m_i}$ (with $m
 Q: When does $a_1 x_1 + a_2 x_2 + \dots + a_k x_k = c$ have an integer solution?
 A: Iff $\gcd(a_1, a_2, \dots, a_k) \mid c$. Same structure as the two-variable case, with multivariate Bézout providing coefficients $\gcd(a_1,\dots,a_k) = \sum x_i a_i$. Parametrization of all solutions uses a $(k - 1)$-dimensional lattice of free parameters — more machinery but same principles.
 
-P: Does $6x + 10y + 15z = 1$ have an integer solution?
+P: Determine whether $6x + 10y + 15z = 1$ has an integer solution, and if so exhibit one.
 S:
 **IDENTIFY**: Multivariate Diophantine — check divisibility.
 
@@ -89,5 +89,5 @@ S:
 Q: Why are nonlinear Diophantine equations much harder than linear ones?
 A: Because no general method exists — Hilbert's 10th problem asks for an algorithm deciding whether a given polynomial Diophantine equation has integer solutions, and Matiyasevich (1970) proved NO such algorithm exists. Individual equations (Pell $x^2 - Dy^2 = 1$, Fermat $x^n + y^n = z^n$) require deep machinery. Linear Diophantine equations are the one fully-solved family.
 
-Q: Name one famous nonlinear Diophantine equation and its resolution.
-A: [Fermat's Last Theorem]: for $n \geq 3$, $x^n + y^n = z^n$ has no solutions in positive integers. Conjectured by Fermat (1637); proved by Andrew Wiles (1994) after $357$ years, using elliptic curves and modular forms. Illustrates how "simple" Diophantine equations can take centuries and entirely new mathematics to resolve.
+Q: What does Fermat's Last Theorem state, and how was it resolved?
+A: For $n \geq 3$, $x^n + y^n = z^n$ has no solutions in positive integers. Conjectured by Fermat (1637); proved by Andrew Wiles (1994) after $357$ years, using elliptic curves and modular forms. Illustrates how "simple" Diophantine equations can take centuries and entirely new mathematics to resolve.
