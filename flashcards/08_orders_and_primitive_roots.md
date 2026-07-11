@@ -1,6 +1,6 @@
 +++
 order = 8
-subject = "Mathematics"
+subject = "mathematics"
 tags = ["math", "number-theory", "order", "primitive-root", "discrete-log", "cyclic"]
 +++
 

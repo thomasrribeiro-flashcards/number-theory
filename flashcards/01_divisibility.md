@@ -1,6 +1,6 @@
 +++
 order = 1
-subject = "Mathematics"
+subject = "mathematics"
 tags = ["math", "number-theory", "divisibility", "division-algorithm", "integers"]
 +++
 

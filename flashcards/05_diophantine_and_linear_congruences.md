@@ -1,6 +1,6 @@
 +++
 order = 5
-subject = "Mathematics"
+subject = "mathematics"
 tags = ["math", "number-theory", "diophantine", "linear-congruence", "bezout", "integer-solutions"]
 +++
 

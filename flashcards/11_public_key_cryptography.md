@@ -1,6 +1,6 @@
 +++
 order = 11
-subject = "Mathematics"
+subject = "mathematics"
 tags = ["math", "number-theory", "cryptography", "rsa", "diffie-hellman", "ecc", "public-key"]
 +++
 

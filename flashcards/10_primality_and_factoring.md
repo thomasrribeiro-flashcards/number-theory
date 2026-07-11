@@ -1,6 +1,6 @@
 +++
 order = 10
-subject = "Mathematics"
+subject = "mathematics"
 tags = ["math", "number-theory", "primality", "factoring", "miller-rabin", "pollard", "aks"]
 +++
 

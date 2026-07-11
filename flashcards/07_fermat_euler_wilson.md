@@ -1,6 +1,6 @@
 +++
 order = 7
-subject = "Mathematics"
+subject = "mathematics"
 tags = ["math", "number-theory", "fermat", "euler", "wilson", "totient", "multiplicative"]
 +++
 

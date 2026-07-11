@@ -1,6 +1,6 @@
 +++
 order = 9
-subject = "Mathematics"
+subject = "mathematics"
 tags = ["math", "number-theory", "quadratic-residues", "legendre", "jacobi", "reciprocity"]
 +++
 

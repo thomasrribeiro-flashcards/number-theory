@@ -1,6 +1,6 @@
 +++
 order = 3
-subject = "Mathematics"
+subject = "mathematics"
 tags = ["math", "number-theory", "primes", "unique-factorization", "prime-counting", "euclid"]
 +++
 

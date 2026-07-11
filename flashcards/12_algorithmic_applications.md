@@ -1,6 +1,6 @@
 +++
 order = 12
-subject = "Mathematics"
+subject = "mathematics"
 tags = ["math", "number-theory", "algorithms", "hashing", "prng", "checksum", "coding-theory"]
 +++
 
